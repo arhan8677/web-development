@@ -1,0 +1,112 @@
+/* A4 PAGE SETUP */
+@page {
+    size: A4;
+    margin: 20mm;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ccc; /* outside page */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* A4 CONTAINER */
+.resume {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    margin: auto;
+    padding: 20mm;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.header p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.contact span {
+    margin: 0 8px;
+    font-size: 12px;
+}
+
+/* LAYOUT */
+.content {
+    display: flex;
+    margin-top: 15px;
+}
+
+.left {
+    width: 40%;
+    padding-right: 15px;
+}
+
+.right {
+    width: 60%;
+}
+
+/* SECTIONS */
+.section {
+    margin-bottom: 15px;
+}
+
+.section h2 {
+    font-size: 15px;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+/* ITEMS */
+.item {
+    margin-bottom: 8px;
+}
+
+.item h3 {
+    margin: 0;
+    font-size: 13px;
+}
+
+.item span {
+    font-size: 11px;
+    color: gray;
+}
+
+.item p {
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+/* TAGS */
+.tags span {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #1e3a8a;
+    padding: 4px 8px;
+    margin: 3px;
+    border-radius: 15px;
+    font-size: 11px;
+}
+
+/* LIST */
+ul {
+    padding-left: 15px;
+}
+
+li {
+    font-size: 12px;
+}
+<!-- updated -->

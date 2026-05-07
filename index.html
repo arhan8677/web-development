@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Lab - Experiments</title>
+    <link rel="stylesheet" href="nav-style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .experiments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .experiment-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experiment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .experiment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+        }
+
+        .experiment-card h3 {
+            margin-top: 0;
+            color: #2d3748;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experiment-card .experiment-number {
+            color: #667eea;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .experiment-card p {
+            color: #718096;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .experiment-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .experiment-links .btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .experiment-links .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #718096;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <h1>🚀 Web Development Lab</h1>
+        <p>Explore interactive HTML experiments and learn web development fundamentals</p>
+        <p style="margin-top: 1rem; font-size: 1rem; opacity: 0.85;">Created by <strong>Arhan Gaiban</strong> |
+            College:-D.Y.Patil College</p>
+    </div>
+
+    <div class="container">
+        <div class="experiments-grid">
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 2</span>
+                <h3>👋 Self Introduction</h3>
+                <p>Create a personal introduction page using basic HTML elements.</p>
+                <div class="experiment-links">
+                    <a href="experientno2.html" class="btn">View Experiment</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 3</span>
+                <h3>📄 Static Web Page</h3>
+                <p>Build a complete static website with HTML structure and content.</p>
+                <div class="experiment-links">
+                    <a href="exprimentno3.html" class="btn">View Experiment</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 4</span>
+                <h3>📋 Nested Lists</h3>
+                <p>Learn about ordered and unordered lists with nesting.</p>
+                <div class="experiment-links">
+                    <a href="experimentno4.html" class="btn">View Experiment</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 5</span>
+                <h3>🖼️ Image Tags</h3>
+                <p>Explore image embedding and attributes in HTML.</p>
+                <div class="experiment-links">
+                    <a href="experimentno5.html" class="btn">View Experiment</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 6</span>
+                <h3>📺 HTML Frames</h3>
+                <p>Understanding frames and frame-based layouts.</p>
+                <div class="experiment-links">
+                    <a href="Experiment 6/frames.html" class="btn">View Experiment</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 7</span>
+                <h3>🔗 Hyperlinks</h3>
+                <p>Master different types of links and navigation.</p>
+                <div class="experiment-links">
+                    <a href="Experiment 7/link.html" class="btn">View Experiment</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 8</span>
+                <h3>📊 HTML Tables</h3>
+                <p>Create and style various types of HTML tables.</p>
+                <div class="experiment-links">
+                    <a href="Experiment 8/table1.html" class="btn">Basic Table</a>
+                    <a href="Experiment 8/table2.html" class="btn">Time Table</a>
+                    <a href="Experiment 8/table3.html" class="btn">Class Schedule</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 9</span>
+                <h3>📋 HTML Forms</h3>
+                <p>Build interactive forms with various input types.</p>
+                <div class="experiment-links">
+                    <a href="Experiment 9/form.html" class="btn">Student Form</a>
+                    <a href="Experiment 9/form1.html" class="btn">Employee Form</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 10</span>
+                <h3>👤 Resume Builder</h3>
+                <p>Create a professional resume using HTML and CSS.</p>
+                <div class="experiment-links">
+                    <a href="Experiment 10/Resume.html" class="btn">View Resume</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 11</span>
+                <h3>📄 XML Basics</h3>
+                <p>Introduction to XML structure and syntax.</p>
+                <div class="experiment-links">
+                    <a href="Experimentno11/student.xml" class="btn">View Output</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 12</span>
+                <h3>🔄 XML & XSL Transformation</h3>
+                <p>Transform XML data using XSL stylesheets.</p>
+                <div class="experiment-links">
+                    <a href="Experimentno12/students.xml" class="btn">View Output</a>
+                </div>
+            </div>
+
+            <div class="experiment-card">
+                <span class="experiment-number">Experiment 13</span>
+                <h3>🚀 Advanced XML & XSL</h3>
+                <p>Advanced XML processing and XSL techniques.</p>
+                <div class="experiment-links">
+                    <a href="Experimentno13/cat.xml" class="btn">View Output</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Web Development Lab Experiments • Built with HTML & CSS</p>
+        <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #94a3b8;">Created by Arhan Gaiban • College Student</p>
+    </div>
+</body>
+
+</html>
+<!-- updated -->

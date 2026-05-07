@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Neon Student Registration</title>
+<link rel="stylesheet" href="../nav-style.css">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: #0f0f1a;
+        color: #fff;
+    }
+
+    .container {
+        width: 500px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #141427;
+        border-radius: 15px;
+        box-shadow: 0 0 20px #00f7ff;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #00f7ff;
+        text-shadow: 0 0 10px #00f7ff;
+    }
+
+    label {
+        display: block;
+        margin-top: 12px;
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        background: #0f0f1a;
+        color: white;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #00f7ff;
+        box-shadow: 0 0 10px #00f7ff;
+    }
+
+    .row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .row input {
+        width: 100%;
+    }
+
+    .radio-group, .checkbox-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 5px;
+        flex-wrap: wrap;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+        font-size: 13px;
+        color: #ccc;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 25px;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background: transparent;
+        color: #00f7ff;
+        font-size: 16px;
+        cursor: pointer;
+        border: 2px solid #00f7ff;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #00f7ff;
+        color: #000;
+        box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+    }
+
+    ::placeholder {
+        color: #777;
+    }
+
+</style>
+</head>
+
+<body>
+    <nav class="nav-header">
+        <h2 class="nav-title">📋 Experiment 9 - HTML Forms</h2>
+        <div class="nav-buttons">
+            <a href="../index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </nav>
+
+<div class="container">
+    <h2>Student Registration</h2>
+
+    <form>
+
+        <!-- Name Row -->
+        <div class="row">
+            <div>
+                <label>First Name</label>
+                <input type="text" placeholder="First Name" required>
+            </div>
+            <div>
+                <label>Last Name</label>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <label>Email</label>
+        <input type="email" placeholder="Enter Email">
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter Phone Number">
+
+        <!-- Account -->
+        <label>Password</label>
+        <input type="password" placeholder="Create Password">
+
+        <!-- Personal Info -->
+        <label>Date of Birth</label>
+        <input type="date">
+
+        <label>Gender</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+            <label><input type="radio" name="gender"> Other</label>
+        </div>
+
+        <!-- Academic -->
+        <label>Select Course</label>
+        <select>
+            <option>Select Course</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>B.Sc</option>
+            <option>M.Tech</option>
+        </select>
+
+        <!-- Skills -->
+        <label>Skills</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox"> Java</label>
+            <label><input type="checkbox"> Python</label>
+            <label><input type="checkbox"> Web Dev</label>
+            <label><input type="checkbox"> AI/ML</label>
+        </div>
+
+        <!-- File -->
+        <label>Upload Resume</label>
+        <input type="file">
+
+        <!-- Address -->
+        <label>Address</label>
+        <textarea rows="3" placeholder="Enter Address"></textarea>
+
+        <!-- Submit -->
+        <button type="submit">Register</button>
+
+    </form>
+</div>
+
+<footer class="exp-footer">
+    <p>&copy; 2024 Web Development Lab | 
+        <a href="../index.html">Home</a>
+    </p>
+</footer>
+</body>
+</html>
+<!-- updated -->
