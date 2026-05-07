@@ -6,55 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Lab - Experiments</title>
     <link rel="stylesheet" href="nav-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-color: #0f172a;
+            /* Dark slate */
+            --glass-bg: rgba(30, 41, 59, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-glow: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
         body {
-            font-family: 'Verdana', sans-serif;
-            background: linear-gradient(135deg, #f0f3f8 0%, #e1e8f0 100%);
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%),
+                radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 0.2) 0, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 0.2) 0, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
             min-height: 100vh;
             padding: 0;
+            margin: 0;
         }
 
         .hero {
             text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, #00a8ff 0%, #9c88ff 100%);
-            color: #ffffff;
-            margin-bottom: 2rem;
+            padding: 5rem 2rem 4rem;
+            background: transparent;
+            position: relative;
+            z-index: 10;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 40px rgba(56, 189, 248, 0.3);
+            letter-spacing: -1px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 650px;
             margin: 0 auto;
+            font-weight: 300;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            position: relative;
+            z-index: 10;
         }
 
         .experiments-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
+            margin-top: 1rem;
         }
 
         .experiment-card {
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
         }
@@ -65,63 +95,88 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #00a8ff, #9c88ff);
+            height: 3px;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .experiment-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px -10px rgba(56, 189, 248, 0.15);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(40, 53, 75, 0.8);
+        }
+
+        .experiment-card:hover::before {
+            opacity: 1;
         }
 
         .experiment-card h3 {
             margin-top: 0;
-            color: #333333;
-            font-size: 1.4rem;
+            color: var(--text-main);
+            font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .experiment-card .experiment-number {
-            color: #00a8ff;
+            color: var(--accent-glow);
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            display: block;
+            letter-spacing: 2px;
+            margin-bottom: 1.25rem;
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 4px 10px;
+            border-radius: 6px;
         }
 
         .experiment-card p {
-            color: #666666;
-            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
             line-height: 1.6;
+            font-size: 1rem;
         }
 
         .experiment-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
         .experiment-links .btn {
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
             font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .experiment-links .btn:hover {
+            background: var(--accent-gradient);
+            border-color: transparent;
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
+            color: #fff;
         }
 
         .footer {
             text-align: center;
-            padding: 2rem;
-            color: #666666;
-            border-top: 1px solid #e2e8f0;
+            padding: 3rem 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--glass-border);
             margin-top: 4rem;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
